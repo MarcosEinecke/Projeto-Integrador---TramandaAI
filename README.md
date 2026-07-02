@@ -27,7 +27,7 @@ Essa solução busca resolver a dificuldade de comunicação frequente em cidade
 O sistema contará com as seguintes funcionalidades:
 
 - Página inicial com artigos e destaques sobre os pontos turísticos;
-- Página de detalhes do ponto turístico, contendo descrição, endereço, horário de funcionamento, galeria de fotos e mapa;
+- Página de detalhes do ponto turístico, contendo: (descrição, endereço, horário de funcionamento, galeria de fotos e mapa);
 - Painel administrativo com CRUD completo para gerenciamento dos pontos turísticos;
 - Página institucional “Sobre a cidade”;
 - Página de feedback;
@@ -66,3 +66,5 @@ A estrutura do projeto será composta por:
 ## 📌 Objetivo
 
 Criar uma experiência turística mais moderna, acessível e funcional, fortalecendo a divulgação cultural e econômica de Tramandaí por meio da tecnologia.
+
+oi
