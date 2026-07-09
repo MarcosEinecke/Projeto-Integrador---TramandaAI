@@ -8,7 +8,7 @@ return [
         'driver' => 'mysql',
         'host' => 'localhost',
         'port' => 3306,
-        'dbname' => 'TramandaAI',
+        'dbname' => 'tramandaai',
         'user' => 'root',
         'password'=> 'senacrs',
         'charset' => 'utf8mb4'
