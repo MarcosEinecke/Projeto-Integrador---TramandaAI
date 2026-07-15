@@ -1,68 +1,54 @@
 <?php
 
-
 class DB
 {
-
-    // Criação do atributo $Db que vai receber o obj do tipo PDO
     public $db;
-
 
     public function __construct($config)
     {
-        $this->db = new PDO($this->getDsn($config));
+        $this->db = new PDO(
+            $this->getDsn($config),
+            $config['user'] ?? null,
+            $config['password'] ?? null,
+            [
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+                PDO::ATTR_EMULATE_PREPARES => false,
+            ]
+        );
     }
 
     private function getDsn($config)
     {
-
         $driver = $config['driver'];
-        unset($config['driver']);
+        $dsnConfig = $config;
+        unset($dsnConfig['driver']);
 
-        $dsn = $driver . ':' . http_build_query($config, '', ';');
-
-        if ($driver == 'sqlite') {
-            $dsn = $driver . ':' . $config['database'];
+        if ($driver === 'sqlite') {
+            return $driver . ':' . ($dsnConfig['database'] ?? 'database.sqlite');
         }
 
-        return $dsn;
-         
+        return $driver . ':' . http_build_query($dsnConfig, '', ';');
     }
-
-
-
-
-
 
     public function artigos($pesquisar)
     {
-
-
-        $prepare = $this->db->prepare("select * from artigos 
-        where
-        titulo like :pesquisar or dataPublicacao like :pesquisar or descricao like :pesquisar");
-
+        $prepare = $this->db->prepare("select * from artigo where titulo like :pesquisar or dataPublicacao like :pesquisar or descricao like :pesquisar");
         $prepare->bindValue('pesquisar', "%$pesquisar%");
         $prepare->setFetchMode(PDO::FETCH_CLASS, Artigo::class);
         $prepare->execute();
         return $prepare->fetchAll();
     }
 
-
-
     public function artigo($id)
     {
-        $prepare = $this->db->prepare("select * from artigos 
-        where id = :id");
+        $prepare = $this->db->prepare("select * from artigo where id = :id");
         $prepare->bindValue('id', $id);
         $prepare->setFetchMode(PDO::FETCH_CLASS, Artigo::class);
         $prepare->execute();
 
         return $prepare->fetch();
     }
-
-
-
 
     public function query($sql, $class = null, $params = [])
     {
@@ -74,4 +60,5 @@ class DB
         return $prepare;
     }
 }
+
 $database = new DB($config['database']);
