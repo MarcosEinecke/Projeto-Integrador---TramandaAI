@@ -1,15 +1,15 @@
-<?php 
+<?php
 
-require "models/Feadbeck.php";
-require "models/Artigo.php";
-require "models/Usuario.php";
+require __DIR__ . '/Models/Feadbeck.php';
+require __DIR__ . '/Models/Artigo.php';
+require __DIR__ . '/Models/Usuario.php';
 session_start();
-require "Flash.php";
-require "function.php";
-require "Validacao.php";
-$config = require 'config.php';
-require "database.php";
-require "route.php";
+require __DIR__ . '/Flash.php';
+require __DIR__ . '/function.php';
+require __DIR__ . '/Validacao.php';
+$config = require __DIR__ . '/config.php';
+require __DIR__ . '/database.php';
+require __DIR__ . '/route.php';
 
 
 

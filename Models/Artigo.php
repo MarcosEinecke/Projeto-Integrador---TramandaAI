@@ -17,11 +17,10 @@ class Artigo
 
     public function query($where, $params)
     {
-
         $database = new DB(config('database'));
 
         return $database->query(
-            sql: "SELECT * FROM artigos  where $where",
+            sql: "SELECT * FROM artigo where $where",
             class: self::class,
             params: $params
         );

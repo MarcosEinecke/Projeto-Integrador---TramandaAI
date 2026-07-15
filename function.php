@@ -2,35 +2,24 @@
 
 function view($view, $data = [])
 {
-
     foreach ($data as $key => $value) {
         $$key = $value;
     }
 
-
-
-    require "view/template/app.php";
+    require __DIR__ . '/view/template/app.php';
 }
-
 
 function view2($view2, $data = [])
 {
-
     foreach ($data as $key => $value) {
         $$key = $value;
     }
 
-
-
-    require "view/template/app2.php";
+    require __DIR__ . '/view/template/app2.php';
 }
-
-
-
 
 function dd(...$dump)
 {
-
     echo "<pre>";
     var_dump($dump);
     echo "</pre>";
@@ -39,25 +28,23 @@ function dd(...$dump)
 
 function abort($code)
 {
-
     http_response_code($code);
     view($code);
     die();
 }
 
-
-function flash(){
-    return new flash;
+function flash()
+{
+    return new Flash();
 }
 
-function config($chave = null){
+function config($chave = null)
+{
+    $config = require __DIR__ . '/config.php';
 
-    $config = require 'config.php';
-
-    if(strlen($chave) > 0){
+    if (strlen($chave) > 0) {
         return $config[$chave];
     }
 
     return $config;
-
 }
