@@ -39,7 +39,8 @@ CREATE TABLE artigo (
 CREATE TABLE fale_conosco (
     id        INT AUTO_INCREMENT PRIMARY KEY,
     nome      VARCHAR(100) NOT NULL,
-    email     VARCHAR(150) NOT NULL,
-    assunto   VARCHAR(200),
-    mensagem  TEXT NOT NULL
+    comentario VARCHAR(255) NOT NULL,
+    foto VARCHAR(255),
+    nota  TEXT NOT NULL
 );
+

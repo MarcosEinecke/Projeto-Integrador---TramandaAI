@@ -8,7 +8,7 @@ $pontosTemp = [
         'endereco' => 'Av. Beira Mar, Tramandaí - RS',
         'horario' => 'Aberta 24h, acesso livre',
         'galeria' => [
-            'https://images.pexels.com/photos/10205953/pexels-photo-10205953.jpeg?auto=compress&cs=tinysrgb&w=1200',
+            '/view/img/Praia.jpg',
         ],
     ],
     2 => [
@@ -18,7 +18,7 @@ $pontosTemp = [
         'endereco' => 'Av. Beira Mar, próximo ao Centro, Tramandaí - RS',
         'horario' => 'Visitação livre durante o dia',
         'galeria' => [
-            'https://images.pexels.com/photos/35609297/pexels-photo-35609297.jpeg?auto=compress&cs=tinysrgb&w=1200',
+            '/view/img/Plataforma.jpg',
         ],
     ],
     3 => [
@@ -28,7 +28,7 @@ $pontosTemp = [
         'endereco' => 'Ponta da Barra, Tramandaí - RS',
         'horario' => 'Acesso livre',
         'galeria' => [
-            'https://images.pexels.com/photos/6930223/pexels-photo-6930223.jpeg?auto=compress&cs=tinysrgb&w=1200',
+            '/view/img/Barra.jpg',
         ],
     ],
     4 => [
@@ -38,7 +38,7 @@ $pontosTemp = [
         'endereco' => 'RS-030, Tramandaí - RS',
         'horario' => 'Diariamente, das 8h às 18h',
         'galeria' => [
-            'https://images.pexels.com/photos/27989902/pexels-photo-27989902.jpeg?auto=compress&cs=tinysrgb&w=1200',
+            '/view/img/ParqueHistorico.jpg',
         ],
     ],
     5 => [
@@ -48,7 +48,7 @@ $pontosTemp = [
         'endereco' => 'Av. Beira Mar, próximo ao farol, Tramandaí - RS',
         'horario' => 'Diariamente, acesso gratuito',
         'galeria' => [
-            'https://images.pexels.com/photos/12989844/pexels-photo-12989844.jpeg?auto=compress&cs=tinysrgb&w=1200',
+            '/view/img/Estatua.png',
         ],
     ],
     6 => [
@@ -58,7 +58,7 @@ $pontosTemp = [
         'endereco' => 'Centro, Tramandaí - RS',
         'horario' => 'Terça a domingo, das 9h às 17h',
         'galeria' => [
-            'https://images.pexels.com/photos/1203565/pexels-photo-1203565.jpeg?auto=compress&cs=tinysrgb&w=1200',
+            '/view/img/Museu.jpg',
         ],
     ],
 ];

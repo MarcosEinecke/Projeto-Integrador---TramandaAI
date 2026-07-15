@@ -5,9 +5,7 @@ class FaleConosco
 
 
     public $nome;
-    public $email;
-    public $assunto;
-    public $mensagem;
+    public $comentario;
+    public $foto;
+    public $nota;
 }
-
-

@@ -6,9 +6,10 @@
 
     <!-- Galeria -->
     <div class="mb-10">
-        <img id="foto-principal" src="<?= $ponto['galeria'][0] ?? '' ?>" alt="<?= $ponto['nome'] ?>"
-            class="w-full h-72 md:h-[420px] object-cover rounded-2xl shadow-md">
-
+        <div class= "h-[420px] w-full">
+            <img id="foto-principal" src="<?= $ponto['galeria'][0] ?? '' ?>" alt="<?= $ponto['nome'] ?>"
+                class="h-full  md:h-full w-10/12 object-cover rounded-2xl shadow-md">
+        </div>
         <?php if (!empty($ponto['galeria']) && count($ponto['galeria']) > 1): ?>
             <div class="flex gap-3 mt-3 overflow-x-auto pb-1">
                 <?php foreach ($ponto['galeria'] as $foto): ?>
